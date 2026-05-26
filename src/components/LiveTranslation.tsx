@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mic, Waveform } from "lucide-react";
+import { Mic, AudioLines } from "lucide-react";
 
 const LINES = [
   { ar: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ", en: "In the name of Allah, the Most Gracious, the Most Merciful" },
