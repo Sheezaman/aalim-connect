@@ -64,67 +64,20 @@ function Index() {
         </div>
       </section>
 
-      {/* QR + LANGUAGES */}
+      {/* LANGUAGES */}
       <section id="languages" className="py-24 border-t border-border/60">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary mb-4">
-                <QrCode className="size-4" /> For attendees
-              </div>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-5">
-                Scan the QR. Pick your language. Listen.
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Worshippers simply scan the QR code displayed in the masjid and choose
-                from 20+ languages — the translation plays instantly in their language,
-                synced with the imam.
-              </p>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-3"><span className="mt-1.5 size-1.5 rounded-full bg-primary" /> No downloads required</li>
-                <li className="flex items-start gap-3"><span className="mt-1.5 size-1.5 rounded-full bg-primary" /> Works on any phone</li>
-                <li className="flex items-start gap-3"><span className="mt-1.5 size-1.5 rounded-full bg-primary" /> Private & silent — only you hear it</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute -inset-6 bg-primary/10 blur-3xl rounded-full" />
-                <div className="relative bg-card p-8 rounded-3xl border border-border/60 shadow-elegant">
-                  <QRCodeSVG
-                    value="https://aalim.app/listen"
-                    size={240}
-                    bgColor="transparent"
-                    fgColor="oklch(0.32 0.09 160)"
-                    level="H"
-                  />
-                  <div className="mt-5 text-center">
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Live at</div>
-                    <div className="font-display font-semibold text-lg">Masjid Al-Noor</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-semibold mb-2">20+ languages, growing</h3>
-            <p className="text-muted-foreground">From Urdu to Spanish — meet every member of your jama'ah.</p>
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary mb-4">
+              <LangIcon className="size-4" /> Languages
+            </div>
+            <h3 className="text-4xl md:text-5xl font-semibold mb-3">20+ languages, growing</h3>
+            <p className="text-lg text-muted-foreground">From Urdu to Spanish — meet every member of your jama'ah.</p>
           </div>
           <Languages />
         </div>
       </section>
+
 
       {/* AYAH RECOGNITION */}
       <section id="features" className="py-24 bg-secondary/30 border-y border-border/60">
