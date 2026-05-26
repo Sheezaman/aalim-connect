@@ -34,7 +34,7 @@ export function LiveTranslation() {
         </div>
         <div className="flex items-center gap-1.5 text-muted-foreground">
           <Mic className="size-3.5" />
-          <Waveform className="size-3.5" />
+          <AudioLines className="size-3.5" />
           <span className="text-xs">EN</span>
         </div>
       </div>
