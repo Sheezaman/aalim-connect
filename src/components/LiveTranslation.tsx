@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from "motion/react";
 import { Mic, AudioLines } from "lucide-react";
 
 const LINES = [
-  { ar: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ", en: "In the name of Allah, the Most Gracious, the Most Merciful" },
-  { ar: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", en: "All praise is due to Allah, Lord of all worlds" },
-  { ar: "الرَّحْمَٰنِ الرَّحِيمِ", en: "The Most Gracious, the Most Merciful" },
-  { ar: "مَالِكِ يَوْمِ الدِّينِ", en: "Master of the Day of Judgment" },
-  { ar: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ", en: "You alone we worship, and You alone we ask for help" },
+  { ar: "أيها الإخوة، اتقوا الله في كل أموركم", en: "O brothers, be mindful of Allah in all your affairs" },
+  { ar: "إن أعظم نعمة بعد الإيمان هي نعمة الوقت", en: "Indeed, the greatest blessing after faith is the blessing of time" },
+  { ar: "فاحرصوا على الصلاة في جماعة", en: "So be eager to pray in congregation" },
+  { ar: "وأحسنوا إلى جيرانكم وأهليكم", en: "And be kind to your neighbours and your families" },
+  { ar: "وتذكروا أن الدنيا دار ممر لا دار مقر", en: "And remember that this world is a passage, not a place of stay" },
 ];
+
 
 export function LiveTranslation() {
   const [i, setI] = useState(0);
