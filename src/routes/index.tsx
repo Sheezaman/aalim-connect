@@ -107,16 +107,17 @@ function Index() {
                 <span className="size-2 rounded-full bg-primary animate-pulse" />
                 <span className="font-medium">Ayah detected</span>
               </div>
-              <span className="text-xs text-muted-foreground font-mono">Surah Al-Fatihah · 1:2</span>
+              <span className="text-xs text-muted-foreground font-mono">Surah Al-Baqarah · 2:152</span>
             </div>
             <div className="p-8 md:p-12">
               <p dir="rtl" className="font-arabic text-4xl md:text-5xl text-foreground leading-[1.7] text-center mb-8">
-                ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ
+                فَٱذْكُرُونِىٓ أَذْكُرْكُمْ وَٱشْكُرُوا۟ لِى وَلَا تَكْفُرُونِ
               </p>
               <div className="h-px bg-border my-6" />
               <p className="text-xl md:text-2xl text-center text-muted-foreground italic leading-relaxed">
-                "All praise is due to Allah, Lord of all the worlds."
+                "So remember Me; I will remember you. And be grateful to Me and do not deny Me."
               </p>
+
               <div className="mt-8 flex items-center justify-center gap-4 text-xs text-muted-foreground">
                 <span className="px-3 py-1 rounded-full bg-secondary border border-border/60">Sahih International</span>
                 <span className="px-3 py-1 rounded-full bg-secondary border border-border/60">Verified ✓</span>
