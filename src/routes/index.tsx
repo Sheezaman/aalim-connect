@@ -41,8 +41,8 @@ function Index() {
               Every word of the khutbah, <span className="text-primary italic">understood</span>.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Aalim translates the imam in real time with greater than 90% accuracy.
-              Set up in your masjid in under a minute.
+              The world's first live khutbah translation platform — delivering real-time
+              translation and ready in your masjid within minutes.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
               <Button size="lg" className="bg-primary-gradient shadow-elegant h-12 px-6">
