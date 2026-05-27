@@ -67,12 +67,18 @@ function Index() {
       {/* LANGUAGES */}
       <section id="languages" className="py-24 border-t border-border/60">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary mb-4">
-              <LangIcon className="size-4" /> Languages
+          <div className="mb-12 max-w-2xl mx-auto">
+            <div className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground mb-5">
+              Language Coverage
             </div>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-3">20+ languages, growing</h3>
-            <p className="text-lg text-muted-foreground">From Urdu to Spanish — meet every member of your jama'ah.</p>
+            <h3 className="text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">
+              <span className="block text-foreground">20+ languages.</span>
+              <span className="block text-primary">So everyone can understand.</span>
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              From Arabic to Urdu, Turkish to Chinese — every member of your jama'ah
+              hears the khutbah in their own language. Simultaneously. In real time.
+            </p>
           </div>
           <Languages />
         </div>
