@@ -185,31 +185,67 @@ function Index() {
         </div>
       </section>
 
-      {/* CTA / FOOTER */}
-      <section className="py-24 border-t border-border/60">
+      {/* CTA / FORM */}
+      <section id="get-started" className="py-24 border-t border-border/60">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative max-w-4xl mx-auto rounded-[2rem] bg-primary-gradient p-12 md:p-16 text-center overflow-hidden shadow-elegant"
-          >
-            <div className="absolute inset-0 opacity-20" style={{
-              backgroundImage: "radial-gradient(circle at 20% 20%, white 0%, transparent 40%), radial-gradient(circle at 80% 80%, white 0%, transparent 40%)"
-            }} />
-            <div className="relative">
-              <p className="font-arabic text-2xl text-primary-foreground/80 mb-4">بُنِيَ لِلْأُمَّةِ</p>
-              <h2 className="font-display text-4xl md:text-6xl font-extrabold text-primary-foreground mb-4 tracking-tight">
-                Built for the Ummah.
-              </h2>
-              <p className="text-lg text-primary-foreground/80 max-w-xl mx-auto mb-8">
-                Bring the khutbah to every heart, in every language. Sadaqah jariyah for your masjid.
-              </p>
-              <Button size="lg" variant="secondary" className="h-12 px-8">
-                Bring Aalim to your masjid <ArrowRight className="size-4" />
-              </Button>
+          <div className="max-w-2xl mx-auto">
+            <div className="text-xs font-medium uppercase tracking-[0.18em] text-primary mb-5">
+              Get Started
             </div>
-          </motion.div>
+            <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight mb-6">
+              <span className="block text-foreground">Bring Aalim</span>
+              <span className="block text-primary">to your masjid.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10">
+              Fill in your details and we'll reach out to get you set up.
+            </p>
+
+            <ul className="space-y-4 mb-10">
+              {[
+                "Under 1 second latency",
+                "Qur'an verse detection included",
+                "Personal QR audio for attendees",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-foreground">
+                  <span className="size-6 rounded-full border border-primary/40 bg-primary/10 grid place-items-center">
+                    <svg className="size-3.5 text-primary" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="3"><path d="M5 10l3 3 7-7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                  <span className="text-base">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <motion.form
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              onSubmit={(e) => e.preventDefault()}
+              className="rounded-3xl bg-card border border-border/60 p-7 md:p-9 shadow-elegant space-y-6"
+            >
+              {[
+                { label: "Full Name", required: true, placeholder: "Sheikh Abdullah", type: "text" },
+                { label: "Masjid Name", required: false, placeholder: "Masjid Al-Noor", type: "text" },
+                { label: "Masjid Address", required: false, placeholder: "123 Main St, City, Country", type: "text" },
+                { label: "Telephone Number", required: false, placeholder: "(555) 000-0000", type: "tel" },
+              ].map((field) => (
+                <div key={field.label}>
+                  <label className="block text-xs font-bold uppercase tracking-[0.14em] text-foreground/80 mb-2">
+                    {field.label} {field.required && <span className="text-primary">*</span>}
+                  </label>
+                  <input
+                    type={field.type}
+                    required={field.required}
+                    placeholder={field.placeholder}
+                    className="w-full h-12 rounded-xl bg-secondary/40 border border-border/60 px-4 text-base text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition"
+                  />
+                </div>
+              ))}
+
+              <Button type="submit" size="lg" className="w-full bg-primary-gradient shadow-elegant h-12 mt-2">
+                Request access <ArrowRight className="size-4" />
+              </Button>
+            </motion.form>
+          </div>
         </div>
 
         <footer className="container mx-auto px-6 mt-16 pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
@@ -220,6 +256,7 @@ function Index() {
           <div>© 2026 Aalim. Made with sincerity.</div>
         </footer>
       </section>
+
     </div>
   );
 }
