@@ -37,7 +37,7 @@ function Index() {
               <Sparkles className="size-3.5 text-primary" />
               The #1 live translation made for masjids
             </div>
-            <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight mb-6">
+            <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
               Every word of the khutbah, <span className="text-primary italic">understood</span>.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -71,7 +71,7 @@ function Index() {
             <div className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground mb-5">
               Language Coverage
             </div>
-            <h3 className="text-4xl md:text-5xl font-semibold leading-[1.1] mb-6">
+            <h3 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
               <span className="block text-foreground">20+ languages.</span>
               <span className="block text-primary">So everyone can understand.</span>
             </h3>
@@ -92,7 +92,7 @@ function Index() {
             <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary mb-4">
               <BookOpen className="size-4" /> Ayah Recognition
             </div>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Knows the Qur'an, word for word.
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -140,7 +140,7 @@ function Index() {
             <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary mb-4">
               How it works
             </div>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">Two ways to listen.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Two ways to listen.</h2>
             <p className="text-lg text-muted-foreground">
               The masjid sets up once. Everyone benefits — instantly.
             </p>
@@ -157,7 +157,7 @@ function Index() {
                 <Tv className="size-5 text-primary-foreground" />
               </div>
               <div className="text-xs font-mono text-primary mb-2">01 · ON THE MASJID TV</div>
-              <h3 className="text-2xl font-semibold mb-3">English translation, live on screen</h3>
+              <h3 className="text-2xl font-bold mb-3">English translation, live on screen</h3>
               <p className="text-muted-foreground">
                 Connect Aalim to any TV in the masjid. The English translation appears
                 automatically as the imam speaks — readable across the prayer hall.
@@ -175,7 +175,7 @@ function Index() {
                 <QrCode className="size-5 text-primary-foreground" />
               </div>
               <div className="text-xs font-mono text-primary mb-2">02 · ON YOUR PHONE</div>
-              <h3 className="text-2xl font-semibold mb-3">Scan the QR for any language</h3>
+              <h3 className="text-2xl font-bold mb-3">Scan the QR for any language</h3>
               <p className="text-muted-foreground">
                 Need Urdu, Spanish, Turkish, or 17+ others? Scan the QR code, pick your
                 language, and listen privately on your phone — perfectly synced.
@@ -199,7 +199,7 @@ function Index() {
             }} />
             <div className="relative">
               <p className="font-arabic text-2xl text-primary-foreground/80 mb-4">بُنِيَ لِلْأُمَّةِ</p>
-              <h2 className="font-display text-4xl md:text-6xl font-semibold text-primary-foreground mb-4 tracking-tight">
+              <h2 className="font-display text-4xl md:text-6xl font-extrabold text-primary-foreground mb-4 tracking-tight">
                 Built for the Ummah.
               </h2>
               <p className="text-lg text-primary-foreground/80 max-w-xl mx-auto mb-8">
@@ -214,7 +214,7 @@ function Index() {
 
         <footer className="container mx-auto px-6 mt-16 pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span className="font-display font-semibold text-foreground">Aalim</span>
+            <span className="font-display font-bold text-foreground">Aalim</span>
             <span>· Live translation for the masjid</span>
           </div>
           <div>© 2026 Aalim. Made with sincerity.</div>
