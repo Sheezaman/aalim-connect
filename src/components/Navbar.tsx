@@ -9,7 +9,7 @@ export function Navbar() {
           <div className="size-9 rounded-xl bg-primary-gradient grid place-items-center shadow-soft">
             <Moon className="size-4 text-primary-foreground" strokeWidth={2.5} />
           </div>
-          <span className="font-display text-xl font-semibold tracking-tight">Aalim</span>
+          <span className="font-display text-xl font-bold tracking-tight">Aalim</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#features" className="hover:text-foreground transition">Features</a>
