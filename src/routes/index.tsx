@@ -186,17 +186,17 @@ function Index() {
       </section>
 
       {/* CTA / FORM */}
-      <section id="get-started" className="py-24 border-t border-border/60">
+      <section id="get-started" className="py-24 bg-foreground text-background">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <div className="text-xs font-medium uppercase tracking-[0.18em] text-primary mb-5">
               Get Started
             </div>
             <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight mb-6">
-              <span className="block text-foreground">Bring Aalim</span>
+              <span className="block text-background">Bring Aalim</span>
               <span className="block text-primary">to your masjid.</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-10">
+            <p className="text-lg text-background/60 mb-10">
               Fill in your details and we'll reach out to get you set up.
             </p>
 
@@ -206,7 +206,7 @@ function Index() {
                 "Qur'an verse detection included",
                 "Personal QR audio for attendees",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-foreground">
+                <li key={item} className="flex items-center gap-3 text-background">
                   <span className="size-6 rounded-full border border-primary/40 bg-primary/10 grid place-items-center">
                     <svg className="size-3.5 text-primary" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="3"><path d="M5 10l3 3 7-7" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </span>
@@ -220,23 +220,22 @@ function Index() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               onSubmit={(e) => e.preventDefault()}
-              className="rounded-3xl bg-card border border-border/60 p-7 md:p-9 shadow-elegant space-y-6"
+              className="rounded-3xl bg-background/5 border border-background/10 p-7 md:p-9 shadow-elegant space-y-6 backdrop-blur"
             >
               {[
-                { label: "Full Name", required: true, placeholder: "Sheikh Abdullah", type: "text" },
-                { label: "Masjid Name", required: false, placeholder: "Masjid Al-Noor", type: "text" },
-                { label: "Masjid Address", required: false, placeholder: "123 Main St, City, Country", type: "text" },
-                { label: "Telephone Number", required: false, placeholder: "(555) 000-0000", type: "tel" },
+                { label: "Full Name", required: true, type: "text" },
+                { label: "Masjid Name", required: false, type: "text" },
+                { label: "Masjid Address", required: false, type: "text" },
+                { label: "Telephone Number", required: false, type: "tel" },
               ].map((field) => (
                 <div key={field.label}>
-                  <label className="block text-xs font-bold uppercase tracking-[0.14em] text-foreground/80 mb-2">
+                  <label className="block text-xs font-bold uppercase tracking-[0.14em] text-background/80 mb-2">
                     {field.label} {field.required && <span className="text-primary">*</span>}
                   </label>
                   <input
                     type={field.type}
                     required={field.required}
-                    placeholder={field.placeholder}
-                    className="w-full h-12 rounded-xl bg-secondary/40 border border-border/60 px-4 text-base text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition"
+                    className="w-full h-12 rounded-xl bg-background/10 border border-background/15 px-4 text-base text-background placeholder:text-background/40 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition"
                   />
                 </div>
               ))}
@@ -248,14 +247,15 @@ function Index() {
           </div>
         </div>
 
-        <footer className="container mx-auto px-6 mt-16 pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <footer className="container mx-auto px-6 mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/60">
           <div className="flex items-center gap-2">
-            <span className="font-display font-bold text-foreground">Aalim</span>
+            <span className="font-display font-bold text-background">Aalim</span>
             <span>· Live translation for the masjid</span>
           </div>
           <div>© 2026 Aalim. Made with sincerity.</div>
         </footer>
       </section>
+
 
     </div>
   );
