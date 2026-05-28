@@ -134,56 +134,153 @@ function Index() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how" className="py-24">
+      <section id="how" className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-primary mb-4">
               How it works
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Two ways to listen.</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Three simple steps.</h2>
             <p className="text-lg text-muted-foreground">
-              The masjid sets up once. Everyone benefits — instantly.
+              From the masjid screen to your phone — translation everyone can follow.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="relative grid md:grid-cols-3 gap-12 md:gap-6 max-w-6xl mx-auto">
+            {/* STEP 1 — TV */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group relative rounded-3xl bg-card border border-border/60 p-8 hover:shadow-elegant transition-shadow"
+              className="relative flex flex-col items-center text-center"
             >
-              <div className="size-12 rounded-2xl bg-primary-gradient grid place-items-center mb-6 shadow-soft">
-                <Tv className="size-5 text-primary-foreground" />
-              </div>
-              <div className="text-xs font-mono text-primary mb-2">01 · ON THE MASJID TV</div>
-              <h3 className="text-2xl font-bold mb-3">English translation, live on screen</h3>
-              <p className="text-muted-foreground">
-                Connect Aalim to any TV in the masjid. The English translation appears
-                automatically as the imam speaks — readable across the prayer hall.
+              <div className="size-10 rounded-full bg-primary text-primary-foreground grid place-items-center font-bold text-sm mb-5 shadow-soft">1</div>
+              <h3 className="text-xl font-bold mb-2">Live Speech on Screen</h3>
+              <p className="text-sm text-muted-foreground max-w-[240px] mb-6">
+                The Imam's speech is shown with live translation.
               </p>
+
+              <div className="w-full max-w-[280px]">
+                <div className="rounded-2xl bg-foreground p-4 shadow-elegant">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold px-2 py-1 rounded bg-primary text-primary-foreground">LIVE</span>
+                  </div>
+                  <p dir="rtl" className="font-arabic text-background text-lg leading-[1.9] text-center mb-3">
+                    عُمَانُ هِيَ مَوْطِنُ الأَصَالَةِ وَالسَّلَامِ
+                  </p>
+                  <div className="h-px bg-primary/40 mb-3" />
+                  <div className="flex items-end justify-between gap-2">
+                    <p className="text-background/90 text-[11px] leading-snug text-left flex-1">
+                      Oman is the cradle of authenticity and peace, where ancient history meets beauty.
+                    </p>
+                    <div className="size-10 rounded-sm bg-background p-1 shrink-0">
+                      <div className="size-full bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground" />
+                    </div>
+                  </div>
+                </div>
+                <div className="mx-auto w-16 h-2 bg-foreground/80 rounded-b" />
+                <div className="mx-auto w-24 h-1 bg-foreground/60 rounded-full mt-0.5" />
+              </div>
+
+              <div className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-card border border-border/60 px-4 py-2.5 shadow-soft text-xs">
+                <span className="size-7 rounded-full bg-primary grid place-items-center shrink-0"><Megaphone className="size-3.5 text-primary-foreground" /></span>
+                <span className="text-left leading-tight">Listen to the speech.<br />Read the translation on screen.</span>
+              </div>
+
+              <ArrowRightIcon className="hidden md:block absolute top-24 -right-3 size-6 text-primary" />
             </motion.div>
 
+            {/* STEP 2 — QR */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group relative rounded-3xl bg-card border border-border/60 p-8 hover:shadow-elegant transition-shadow"
+              className="relative flex flex-col items-center text-center"
             >
-              <div className="size-12 rounded-2xl bg-primary-gradient grid place-items-center mb-6 shadow-soft">
-                <QrCode className="size-5 text-primary-foreground" />
-              </div>
-              <div className="text-xs font-mono text-primary mb-2">02 · ON YOUR PHONE</div>
-              <h3 className="text-2xl font-bold mb-3">Scan the QR for any language</h3>
-              <p className="text-muted-foreground">
-                Need Urdu, Spanish, Turkish, or 17+ others? Scan the QR code, pick your
-                language, and listen privately on your phone — perfectly synced.
+              <div className="size-10 rounded-full bg-primary text-primary-foreground grid place-items-center font-bold text-sm mb-5 shadow-soft">2</div>
+              <h3 className="text-xl font-bold mb-2">Scan the QR Code</h3>
+              <p className="text-sm text-muted-foreground max-w-[240px] mb-6">
+                Scan the QR code on the screen using your phone camera.
               </p>
+
+              <div className="rounded-[2rem] bg-foreground p-3 shadow-elegant w-[170px] aspect-[9/18] flex flex-col">
+                <div className="mx-auto w-16 h-4 bg-background/10 rounded-full mt-1 mb-3" />
+                <div className="flex-1 rounded-2xl bg-background grid place-items-center relative">
+                  <div className="absolute inset-4 border-2 border-primary rounded-xl pointer-events-none" />
+                  <div className="size-20 bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_3px,_transparent_3px,_transparent_6px)] text-foreground rounded" />
+                </div>
+              </div>
+
+              <div className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-card border border-border/60 px-4 py-2.5 shadow-soft text-xs">
+                <span className="size-7 rounded-full bg-primary grid place-items-center shrink-0"><QrCode className="size-3.5 text-primary-foreground" /></span>
+                <span className="text-left leading-tight">Open your camera<br />and scan the QR code.</span>
+              </div>
+
+              <ArrowRightIcon className="hidden md:block absolute top-24 -right-3 size-6 text-primary" />
+            </motion.div>
+
+            {/* STEP 3 — Phone language */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative flex flex-col items-center text-center"
+            >
+              <div className="size-10 rounded-full bg-primary text-primary-foreground grid place-items-center font-bold text-sm mb-5 shadow-soft">3</div>
+              <h3 className="text-xl font-bold mb-2">Select Language & See Live Translation</h3>
+              <p className="text-sm text-muted-foreground max-w-[260px] mb-6">
+                Choose your preferred language and enjoy live translation on your phone.
+              </p>
+
+              <div className="rounded-[2rem] bg-foreground p-3 shadow-elegant w-[200px] flex flex-col">
+                <div className="mx-auto w-16 h-4 bg-background/10 rounded-full mt-1 mb-2" />
+                <div className="rounded-2xl bg-background p-3 flex flex-col">
+                  <div className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground mb-2 text-left">Translating to</div>
+                  <ul className="space-y-1.5 text-xs">
+                    {[
+                      { flag: "🇵🇰", name: "Urdu" },
+                      { flag: "🇹🇷", name: "Turkish" },
+                      { flag: "🇪🇸", name: "Spanish" },
+                      { flag: "🇫🇷", name: "French" },
+                      { flag: "🇮🇳", name: "Hindi" },
+                      { flag: "🇮🇩", name: "Indonesian", selected: true },
+                      { flag: "🇬🇧", name: "English" },
+                    ].map((l) => (
+                      <li key={l.name} className="flex items-center justify-between">
+                        <span className="flex items-center gap-1.5"><span>{l.flag}</span><span className="font-medium text-foreground">{l.name}</span></span>
+                        <span className={`size-3.5 rounded-full border ${l.selected ? "bg-primary border-primary" : "border-border"} grid place-items-center`}>
+                          {l.selected && <Check className="size-2.5 text-primary-foreground" strokeWidth={3} />}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button type="button" className="mt-3 w-full h-8 rounded-full bg-primary text-primary-foreground text-[11px] font-bold">
+                    Start Listening
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-card border border-border/60 px-4 py-2.5 shadow-soft text-xs">
+                <span className="size-7 rounded-full bg-primary grid place-items-center shrink-0"><Headphones className="size-3.5 text-primary-foreground" /></span>
+                <span className="text-left leading-tight">Select your language<br />and see live translation on your phone.</span>
+              </div>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 mx-auto max-w-xl rounded-full bg-secondary border border-border/60 px-5 py-3 flex items-center justify-center gap-3 text-sm text-foreground text-center"
+          >
+            <span className="size-6 rounded-full bg-primary grid place-items-center shrink-0"><Check className="size-3.5 text-primary-foreground" strokeWidth={3} /></span>
+            One scan is all you need. Understand in your language. Stay connected.
+          </motion.div>
         </div>
       </section>
+
 
       {/* CTA / FORM */}
       <section id="get-started" className="py-24 bg-foreground text-background">
