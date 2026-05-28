@@ -160,18 +160,18 @@ function Index() {
                 The Imam's speech is shown with live translation.
               </p>
 
-              <div className="w-full max-w-[280px]">
-                <div className="rounded-2xl bg-foreground p-4 shadow-elegant">
+              <div className="w-full max-w-[320px]">
+                <div className="rounded-2xl bg-foreground p-5 shadow-elegant">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-[10px] font-bold px-2 py-1 rounded bg-primary text-primary-foreground">LIVE</span>
                   </div>
-                  <p dir="rtl" className="font-arabic text-background text-lg leading-[1.9] text-center mb-3">
-                    عُمَانُ هِيَ مَوْطِنُ الأَصَالَةِ وَالسَّلَامِ
+                  <p dir="rtl" className="font-arabic text-background text-[15px] leading-[2] text-center mb-3">
+                    عُمَانُ هِيَ مَوْطِنُ الأَصَالَةِ وَالسَّلَامِ، حَيْثُ يَلْتَقِي التَّارِيخُ العَرِيقُ بِالجَمَالِ السَّاحِرِ وَحُسْنِ الضِّيَافَةِ.
                   </p>
                   <div className="h-px bg-primary/40 mb-3" />
                   <div className="flex items-end justify-between gap-2">
                     <p className="text-background/90 text-[11px] leading-snug text-left flex-1">
-                      Oman is the cradle of authenticity and peace, where ancient history meets beauty.
+                      Oman is the cradle of authenticity and peace, where ancient history meets breathtaking beauty and warm hospitality.
                     </p>
                     <div className="size-10 rounded-sm bg-background p-1 shrink-0">
                       <div className="size-full bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground" />
@@ -204,20 +204,44 @@ function Index() {
                 Scan the QR code on the screen using your phone camera.
               </p>
 
-              <div className="rounded-[2rem] bg-foreground p-3 shadow-elegant w-[170px] aspect-[9/18] flex flex-col">
-                <div className="mx-auto w-16 h-4 bg-background/10 rounded-full mt-1 mb-3" />
-                <div className="flex-1 rounded-2xl bg-background grid place-items-center relative">
-                  <div className="absolute inset-4 border-2 border-primary rounded-xl pointer-events-none" />
-                  <div className="size-20 bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_3px,_transparent_3px,_transparent_6px)] text-foreground rounded" />
+              <div className="relative w-full max-w-[320px]">
+                <div className="rounded-2xl bg-foreground p-5 shadow-elegant">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold px-2 py-1 rounded bg-primary text-primary-foreground">LIVE</span>
+                  </div>
+                  <p dir="rtl" className="font-arabic text-background text-[15px] leading-[2] text-center mb-3">
+                    عُمَانُ هِيَ مَوْطِنُ الأَصَالَةِ وَالسَّلَامِ، حَيْثُ يَلْتَقِي التَّارِيخُ العَرِيقُ بِالجَمَالِ السَّاحِرِ وَحُسْنِ الضِّيَافَةِ.
+                  </p>
+                  <div className="h-px bg-primary/40 mb-3" />
+                  <div className="flex items-end justify-between gap-2">
+                    <p className="text-background/90 text-[11px] leading-snug text-left flex-1">
+                      Oman is the cradle of authenticity and peace, where ancient history meets breathtaking beauty and warm hospitality.
+                    </p>
+                    <div className="size-10 rounded-sm bg-background p-1 shrink-0">
+                      <div className="size-full bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground" />
+                    </div>
+                  </div>
+                </div>
+                <div className="mx-auto w-16 h-2 bg-foreground/80 rounded-b" />
+                <div className="mx-auto w-24 h-1 bg-foreground/60 rounded-full mt-0.5" />
+
+                {/* Phone scanning overlay */}
+                <div className="absolute left-1/2 -translate-x-1/2 -bottom-10 rounded-[1.5rem] bg-foreground p-1.5 shadow-elegant w-[110px] aspect-[9/18] flex flex-col border-2 border-background">
+                  <div className="mx-auto w-10 h-2.5 bg-background/10 rounded-full mt-1 mb-1.5" />
+                  <div className="flex-1 rounded-xl bg-background grid place-items-center relative">
+                    <div className="absolute inset-2 border-2 border-primary rounded-lg pointer-events-none" />
+                    <div className="size-12 bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground rounded" />
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-card border border-border/60 px-4 py-2.5 shadow-soft text-xs">
+              <div className="mt-16 inline-flex items-center gap-2 rounded-2xl bg-card border border-border/60 px-4 py-2.5 shadow-soft text-xs">
                 <span className="size-7 rounded-full bg-primary grid place-items-center shrink-0"><QrCode className="size-3.5 text-primary-foreground" /></span>
                 <span className="text-left leading-tight">Open your camera<br />and scan the QR code.</span>
               </div>
 
               <ArrowRightIcon className="hidden md:block absolute top-24 -right-3 size-6 text-primary" />
+
             </motion.div>
 
             {/* STEP 3 — Phone language */}
