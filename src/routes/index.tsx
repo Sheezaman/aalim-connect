@@ -26,8 +26,54 @@ function Index() {
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-hero pt-16 pb-24">
-        <div className="container mx-auto px-6">
+      <section className="bg-hero pt-16 pb-24 relative overflow-hidden">
+        {/* Decorative masjid line art — right side */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 400 500"
+          className="pointer-events-none absolute right-0 top-10 h-[420px] md:h-[520px] w-auto text-primary/15"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Right minaret */}
+          <line x1="305" y1="60" x2="305" y2="70" />
+          <circle cx="305" cy="58" r="2" />
+          <path d="M285 110 Q305 70 325 110 Z" />
+          <rect x="290" y="110" width="30" height="10" />
+          <rect x="288" y="120" width="34" height="6" />
+          <rect x="293" y="130" width="24" height="70" />
+          <path d="M293 145 Q305 138 317 145" />
+          <rect x="288" y="200" width="34" height="6" />
+          <rect x="290" y="206" width="30" height="10" />
+          <rect x="293" y="216" width="24" height="120" />
+          <path d="M300 260 Q305 250 310 260 L310 280 L300 280 Z" />
+          <rect x="288" y="336" width="34" height="8" />
+
+          {/* Main dome */}
+          <path d="M180 75 Q175 65 180 58 Q185 55 190 58 Q195 65 190 75" />
+          <line x1="185" y1="78" x2="185" y2="90" />
+          <circle cx="185" cy="93" r="3" />
+          <path d="M110 200 Q110 110 185 105 Q260 110 260 200" />
+          <line x1="110" y1="200" x2="260" y2="200" />
+
+          {/* Base building */}
+          <rect x="90" y="200" width="190" height="20" />
+          <rect x="85" y="220" width="200" height="220" />
+          {/* Arches */}
+          <path d="M115 440 L115 360 Q115 330 140 330 Q165 330 165 360 L165 440" />
+          <path d="M205 440 L205 360 Q205 330 230 330 Q255 330 255 360 L255 440" />
+          {/* Side small domes */}
+          <path d="M95 220 Q95 195 115 195 Q135 195 135 220" />
+          <path d="M235 220 Q235 195 255 195 Q275 195 275 220" />
+
+          {/* Ground line */}
+          <line x1="60" y1="440" x2="340" y2="440" />
+        </svg>
+
+        <div className="container mx-auto px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
