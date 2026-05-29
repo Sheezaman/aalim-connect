@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
+import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { LiveTranslation } from "@/components/LiveTranslation";
