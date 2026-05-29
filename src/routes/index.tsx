@@ -175,7 +175,7 @@ function Index() {
                       Oman is the cradle of authenticity and peace, where ancient history meets breathtaking beauty and warm hospitality.
                     </p>
                     <div className="size-10 rounded-sm bg-background p-1 shrink-0">
-                      <div className="size-full bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground" />
+                      <QRCodeSVG value="https://aalim.app/live" size={32} bgColor="#ffffff" fgColor="#0a0a0a" level="M" />
                     </div>
                   </div>
                 </div>
