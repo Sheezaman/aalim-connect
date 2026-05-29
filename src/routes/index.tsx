@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
+import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { LiveTranslation } from "@/components/LiveTranslation";
@@ -207,18 +208,11 @@ function Index() {
               <div className="relative w-full max-w-[320px]">
                 <div className="rounded-2xl bg-foreground p-5 shadow-elegant">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-bold px-2 py-1 rounded bg-primary text-primary-foreground">LIVE</span>
+                    <span className="text-[10px] font-bold px-2 py-1 rounded bg-primary text-primary-foreground">SCAN ME</span>
                   </div>
-                  <p dir="rtl" className="font-arabic text-background text-[15px] leading-[2] text-center mb-3">
-                    عُمَانُ هِيَ مَوْطِنُ الأَصَالَةِ وَالسَّلَامِ، حَيْثُ يَلْتَقِي التَّارِيخُ العَرِيقُ بِالجَمَالِ السَّاحِرِ وَحُسْنِ الضِّيَافَةِ.
-                  </p>
-                  <div className="h-px bg-primary/40 mb-3" />
-                  <div className="flex items-end justify-between gap-2">
-                    <p className="text-background/90 text-[11px] leading-snug text-left flex-1">
-                      Oman is the cradle of authenticity and peace, where ancient history meets breathtaking beauty and warm hospitality.
-                    </p>
-                    <div className="size-10 rounded-sm bg-background p-1 shrink-0">
-                      <div className="size-full bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground" />
+                  <div className="grid place-items-center py-4">
+                    <div className="rounded-xl bg-background p-3 border-2 border-primary">
+                      <QRCodeSVG value="https://aalim.app/live" size={140} bgColor="#ffffff" fgColor="#0a0a0a" level="M" />
                     </div>
                   </div>
                 </div>
@@ -228,9 +222,9 @@ function Index() {
                 {/* Phone scanning overlay */}
                 <div className="absolute left-1/2 -translate-x-1/2 -bottom-10 rounded-[1.5rem] bg-foreground p-1.5 shadow-elegant w-[110px] aspect-[9/18] flex flex-col border-2 border-background">
                   <div className="mx-auto w-10 h-2.5 bg-background/10 rounded-full mt-1 mb-1.5" />
-                  <div className="flex-1 rounded-xl bg-background grid place-items-center relative">
-                    <div className="absolute inset-2 border-2 border-primary rounded-lg pointer-events-none" />
-                    <div className="size-12 bg-[repeating-linear-gradient(45deg,_currentColor_0,_currentColor_2px,_transparent_2px,_transparent_4px)] text-foreground rounded" />
+                  <div className="flex-1 rounded-xl bg-background grid place-items-center relative overflow-hidden">
+                    <div className="absolute inset-2 border-2 border-primary rounded-lg pointer-events-none z-10" />
+                    <QRCodeSVG value="https://aalim.app/live" size={70} bgColor="#ffffff" fgColor="#0a0a0a" level="M" />
                   </div>
                 </div>
               </div>
