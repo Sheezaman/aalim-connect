@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import aalimLogo from "@/assets/aalim-logo.png";
 
 export const Route = createFileRoute("/login")({
@@ -16,7 +16,15 @@ export const Route = createFileRoute("/login")({
 
 function LoginPage() {
   return (
-    <div className="min-h-screen bg-secondary/40 islamic-pattern flex flex-col items-center justify-center px-6 py-12">
+    <div className="min-h-screen bg-secondary/40 islamic-pattern flex flex-col items-center justify-center px-6 py-12 relative">
+      <a
+        href="/"
+        aria-label="Back to home"
+        className="absolute top-6 left-6 inline-flex items-center gap-2 px-3 h-10 rounded-full bg-background border border-border/60 shadow-soft text-sm font-medium text-foreground hover:bg-secondary transition"
+      >
+        <ArrowLeft className="size-4" />
+        <span className="hidden sm:inline">Home</span>
+      </a>
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}

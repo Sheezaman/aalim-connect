@@ -34,10 +34,21 @@ function Index() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary border border-border/60 text-xs font-medium text-secondary-foreground mb-6">
-              <Sparkles className="size-3.5 text-primary" />
-              The #1 live translation made for masjids
-            </div>
+            <p className="font-display text-xl md:text-2xl font-bold tracking-tight text-foreground mb-6">
+              The #1 live{" "}
+              <span className="relative inline-block">
+                khutbah
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 200 12"
+                  preserveAspectRatio="none"
+                  className="absolute left-0 -bottom-1.5 w-full h-2 text-primary"
+                >
+                  <path d="M2 7 Q 50 1, 100 5 T 198 6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                </svg>
+              </span>{" "}
+              translation made for masjids
+            </p>
             <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
               Every word of the khutbah, <span className="text-primary italic">understood</span>.
             </h1>
