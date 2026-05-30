@@ -57,10 +57,6 @@ export function LiveTranslation() {
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="px-6 py-3 border-t border-border/60 bg-secondary/30 flex items-center justify-between text-xs text-muted-foreground">
-        <span>Accuracy 96.4%</span>
-        <span>Latency 240ms</span>
-      </div>
     </motion.div>
   );
 }
