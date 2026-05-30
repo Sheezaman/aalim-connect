@@ -15,8 +15,8 @@ export function Navbar() {
           <a href="#how" className="hover:text-foreground transition">How it works</a>
         </nav>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm">Log in</Button>
-          <Button size="sm" className="bg-primary-gradient shadow-soft">Get started</Button>
+          <Button asChild variant="ghost" size="sm"><a href="/login">Log in</a></Button>
+          <Button asChild size="sm" className="bg-primary-gradient shadow-soft"><a href="/login">Get started</a></Button>
         </div>
       </div>
     </header>
