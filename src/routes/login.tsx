@@ -31,8 +31,26 @@ function LoginPage() {
           <h1 className="font-display text-4xl font-extrabold tracking-tight">
             Aalim
           </h1>
-          <p className="text-sm text-muted-foreground mt-2">
-            The #1 live khutbah translation for the masjid
+          <p className="font-display text-2xl md:text-3xl font-bold tracking-tight text-foreground mt-4">
+            The #1 live{" "}
+            <span className="relative inline-block">
+              khutbah
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 200 12"
+                preserveAspectRatio="none"
+                className="absolute left-0 -bottom-1.5 w-full h-2 text-primary"
+              >
+                <path
+                  d="M2 7 Q 50 1, 100 5 T 198 6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>{" "}
+            translation
           </p>
         </div>
 
