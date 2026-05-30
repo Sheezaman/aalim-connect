@@ -57,10 +57,20 @@ function Index() {
 
           <LiveTranslation />
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><ShieldCheck className="size-4 text-primary" /> 96%+ accuracy</span>
-            <span className="flex items-center gap-2"><Zap className="size-4 text-primary" /> 60-second setup</span>
-            <span className="flex items-center gap-2"><LangIcon className="size-4 text-primary" /> 20+ languages</span>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 max-w-5xl mx-auto text-center">
+            {[
+              { title: "Private and Secure", subtitle: "Your data stays protected" },
+              { title: "QR Code Access", subtitle: "Instant access for everyone" },
+              { title: "20+ Languages", subtitle: "Understanding for all" },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col items-center gap-2">
+                <h3 className="font-display text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">
+                  <span className="text-primary">{item.title.split(" ")[0]}</span>{" "}
+                  <span>{item.title.split(" ").slice(1).join(" ")}</span>
+                </h3>
+                <p className="text-base text-muted-foreground">{item.subtitle}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
