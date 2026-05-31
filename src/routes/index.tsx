@@ -321,6 +321,43 @@ function Index() {
       </section>
 
 
+      {/* BUILT FOR THE UMMAH */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative max-w-3xl mx-auto rounded-[2rem] overflow-hidden p-10 md:p-16 text-center shadow-elegant"
+            style={{
+              background:
+                "radial-gradient(ellipse at top, oklch(0.42 0.09 155) 0%, oklch(0.30 0.07 155) 55%, oklch(0.22 0.05 155) 100%)",
+            }}
+          >
+            <p dir="rtl" className="font-arabic text-3xl md:text-4xl text-background/95 mb-8 leading-tight">
+              بُنِيَ لِلْأُمَّةِ
+            </p>
+            <h2 className="font-display text-5xl md:text-6xl font-extrabold text-background leading-[1.05] tracking-tight mb-6">
+              Built for the<br />Ummah.
+            </h2>
+            <p className="text-lg md:text-xl text-background/75 max-w-xl mx-auto mb-10 leading-relaxed">
+              Bring the khutbah to every heart, in every language. Sadaqah jariyah for your masjid.
+            </p>
+            <a
+              href="#get-started"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("get-started")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-background text-foreground font-medium text-base md:text-lg px-8 py-4 shadow-soft hover:bg-background/90 transition-colors"
+            >
+              Bring Aalim to your masjid <ArrowRight className="size-5" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA / FORM */}
       <section id="get-started" className="py-24 bg-foreground text-background">
         <div className="container mx-auto px-6">
