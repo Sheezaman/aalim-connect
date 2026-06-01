@@ -65,7 +65,7 @@ function LoginPage() {
 
         {/* Card */}
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => { e.preventDefault(); navigate({ to: "/dashboard" }); }}
           className="rounded-3xl bg-card border border-border/60 shadow-elegant p-7 md:p-8 space-y-6"
         >
           <div className="text-center mb-2">
