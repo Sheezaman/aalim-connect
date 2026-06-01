@@ -89,7 +89,13 @@ function Dashboard() {
           className="rounded-3xl bg-background border border-border/60 shadow-soft p-8"
         >
           <div className="text-center mb-8">
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground">
+            <p className={`text-xs tracking-[0.2em] uppercase ${sessionActive ? "font-bold text-[#1f5132] inline-flex items-center justify-center gap-2" : "font-semibold text-muted-foreground"}`}>
+              {sessionActive && (
+                <span className="relative flex size-2">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-[#1f5132] opacity-60 animate-ping" />
+                  <span className="relative inline-flex size-2 rounded-full bg-[#1f5132]" />
+                </span>
+              )}
               {sessionActive ? "Session live" : "Ready to translate"}
             </p>
             <h1 className="font-display text-2xl font-bold mt-2">Test</h1>
