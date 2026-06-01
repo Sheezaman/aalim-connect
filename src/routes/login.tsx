@@ -15,6 +15,7 @@ export const Route = createFileRoute("/login")({
 });
 
 function LoginPage() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-secondary/40 islamic-pattern flex flex-col items-center justify-center px-6 py-12 relative">
       <a
