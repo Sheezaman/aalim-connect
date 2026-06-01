@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -15,6 +15,7 @@ export const Route = createFileRoute("/login")({
 });
 
 function LoginPage() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-secondary/40 islamic-pattern flex flex-col items-center justify-center px-6 py-12 relative">
       <a
@@ -64,7 +65,7 @@ function LoginPage() {
 
         {/* Card */}
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => { e.preventDefault(); navigate({ to: "/dashboard" }); }}
           className="rounded-3xl bg-card border border-border/60 shadow-elegant p-7 md:p-8 space-y-6"
         >
           <div className="text-center mb-2">
