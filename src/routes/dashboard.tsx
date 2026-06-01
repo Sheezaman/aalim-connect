@@ -112,7 +112,19 @@ function Dashboard() {
 
           <div className="flex justify-center my-10">
             <button
-              onClick={() => setSessionActive((v) => !v)}
+              onClick={async () => {
+                if (sessionActive) {
+                  setSessionActive(false);
+                  return;
+                }
+                try {
+                  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                  stream.getTracks().forEach((t) => t.stop());
+                  setSessionActive(true);
+                } catch {
+                  /* user denied mic access */
+                }
+              }}
               className="relative grid place-items-center"
               aria-label={sessionActive ? "Stop session" : "Start session"}
             >
