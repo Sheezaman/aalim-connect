@@ -168,26 +168,8 @@ function Index() {
                 So remember Me; I will remember you.<br />
                 And be grateful to Me and do not deny Me.
               </p>
-              <p className="text-center text-sm text-muted-foreground mt-4">— Saheeh International</p>
             </div>
 
-            {/* Footer meta */}
-            <div className="mx-6 mb-6 rounded-2xl bg-[oklch(0.97_0.015_150)]/60 border border-border/60 grid grid-cols-4 divide-x divide-border/60">
-              {[
-                { icon: <BookOpen className="size-5" />, label: "Surah", value: "Al-Baqarah" },
-                { icon: <span className="text-[10px] font-bold">152</span>, label: "Ayah", value: "152" },
-                { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-5"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>, label: "Juz", value: "2" },
-                { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>, label: "Page", value: "23" },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-1.5 py-4 px-2">
-                  <div className="size-9 rounded-lg grid place-items-center text-foreground/70 border border-border/60 bg-card">
-                    {item.icon}
-                  </div>
-                  <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
-                  <div className="text-sm font-semibold text-primary">{item.value}</div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
         </div>
