@@ -403,9 +403,9 @@ function Index() {
 
             <ul className="space-y-4 mb-10">
               {[
-                "Under 1 second latency",
-                "Qur'an verse detection included",
-                "Personal QR audio for attendees",
+                "Connect every worshipper instantly",
+                "Break language barriers in your masjid",
+                "Share translations through one QR",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-background">
                   <span className="size-6 rounded-full border border-primary/40 bg-primary/10 grid place-items-center">
