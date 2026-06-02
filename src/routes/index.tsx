@@ -128,30 +128,68 @@ function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto rounded-3xl bg-card border border-border/60 shadow-elegant overflow-hidden"
+            className="max-w-2xl mx-auto rounded-3xl bg-card border border-border/60 shadow-elegant overflow-hidden"
           >
-            <div className="px-7 py-4 border-b border-border/60 flex items-center justify-between bg-gradient-to-r from-secondary/60 to-transparent">
-              <div className="flex items-center gap-2 text-sm">
-                <span className="size-2 rounded-full bg-primary animate-pulse" />
-                <span className="font-medium">Ayah detected</span>
+            {/* Header */}
+            <div className="px-6 py-5 flex items-center justify-between bg-[oklch(0.97_0.015_150)]/60">
+              <div className="flex items-center gap-4">
+                <div className="size-10 rounded-full border-2 border-primary grid place-items-center text-primary">
+                  <Check className="size-5" strokeWidth={2.5} />
+                </div>
+                <div className="leading-tight">
+                  <div className="font-semibold text-foreground text-base">Ayah</div>
+                  <div className="font-semibold text-foreground text-base">detected</div>
+                </div>
+                <div className="h-10 w-px bg-border/70 mx-2" />
+                <div className="leading-tight">
+                  <div className="font-semibold text-foreground text-base">Surah Al-Baqarah</div>
+                  <div className="text-primary text-sm">Verse 152</div>
+                </div>
               </div>
-              <span className="text-xs text-muted-foreground font-mono">Surah Al-Baqarah · 2:152</span>
+              <div className="size-10 rounded-xl bg-secondary border border-border/60 grid place-items-center relative">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-5 text-foreground/80"><path d="M6 3h12v18l-6-4-6 4V3z" strokeLinejoin="round"/></svg>
+                <span className="absolute -bottom-0.5 -right-0.5 size-2 rounded-full bg-primary" />
+              </div>
             </div>
-            <div className="p-8 md:p-12">
-              <p dir="rtl" className="font-arabic text-4xl md:text-5xl text-foreground leading-[1.7] text-center mb-8">
+
+            {/* Body */}
+            <div className="px-8 py-10 md:px-12 md:py-14 bg-card">
+              <p dir="rtl" className="font-arabic text-4xl md:text-5xl text-primary leading-[2] text-center mb-8">
                 فَٱذْكُرُونِىٓ أَذْكُرْكُمْ وَٱشْكُرُوا۟ لِى وَلَا تَكْفُرُونِ
               </p>
-              <div className="h-px bg-border my-6" />
-              <p className="text-xl md:text-2xl text-center text-muted-foreground italic leading-relaxed">
-                "So remember Me; I will remember you. And be grateful to Me and do not deny Me."
-              </p>
 
-              <div className="mt-8 flex items-center justify-center gap-4 text-xs text-muted-foreground">
-                <span className="px-3 py-1 rounded-full bg-secondary border border-border/60">Sahih International</span>
-                <span className="px-3 py-1 rounded-full bg-secondary border border-border/60">Verified ✓</span>
+              <div className="flex items-center gap-4 my-8">
+                <div className="flex-1 h-px bg-border" />
+                <svg viewBox="0 0 24 24" className="size-5 text-muted-foreground/60" fill="currentColor"><path d="M12 2l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></svg>
+                <div className="flex-1 h-px bg-border" />
               </div>
+
+              <p className="text-lg md:text-xl text-center text-foreground/80 leading-relaxed">
+                So remember Me; I will remember you.<br />
+                And be grateful to Me and do not deny Me.
+              </p>
+              <p className="text-center text-sm text-muted-foreground mt-4">— Saheeh International</p>
+            </div>
+
+            {/* Footer meta */}
+            <div className="mx-6 mb-6 rounded-2xl bg-[oklch(0.97_0.015_150)]/60 border border-border/60 grid grid-cols-4 divide-x divide-border/60">
+              {[
+                { icon: <BookOpen className="size-5" />, label: "Surah", value: "Al-Baqarah" },
+                { icon: <span className="text-[10px] font-bold">152</span>, label: "Ayah", value: "152" },
+                { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-5"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>, label: "Juz", value: "2" },
+                { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>, label: "Page", value: "23" },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-1.5 py-4 px-2">
+                  <div className="size-9 rounded-lg grid place-items-center text-foreground/70 border border-border/60 bg-card">
+                    {item.icon}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
+                  <div className="text-sm font-semibold text-primary">{item.value}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
+
         </div>
       </section>
 
