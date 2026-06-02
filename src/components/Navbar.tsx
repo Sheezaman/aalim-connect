@@ -16,7 +16,17 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" size="sm"><a href="/login">Log in</a></Button>
-          <Button asChild size="sm" className="bg-primary-gradient shadow-soft"><a href="/dashboard">Get started</a></Button>
+          <Button asChild size="sm" className="bg-primary-gradient shadow-soft">
+            <a
+              href="#get-started"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("get-started")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Get started
+            </a>
+          </Button>
         </div>
       </div>
     </header>
