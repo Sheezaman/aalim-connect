@@ -7,6 +7,7 @@ import { Navbar } from "@/components/Navbar";
 import { LiveTranslation } from "@/components/LiveTranslation";
 import { Languages } from "@/components/Languages";
 import { ArrowRight, BookOpen, Tv, QrCode, Languages as LangIcon, Sparkles, ShieldCheck, Zap, Megaphone, ScanLine, Headphones, ArrowRight as ArrowRightIcon, Check } from "lucide-react";
+import masjidHero from "@/assets/masjid-hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
