@@ -27,7 +27,13 @@ function Index() {
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-hero pt-16 pb-24">
+      <section className="bg-hero pt-16 pb-24 relative overflow-hidden">
+        <img
+          src={masjidHero}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute inset-y-0 right-0 h-full w-full md:w-[70%] object-cover object-right opacity-70 [mask-image:linear-gradient(to_right,transparent_0%,black_45%)]"
+        />
         <div className="container mx-auto px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
