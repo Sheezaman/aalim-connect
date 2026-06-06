@@ -95,12 +95,16 @@ function Index() {
               Language Coverage
             </div>
             <h3 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
-              <span className="block text-foreground">20+ languages.</span>
+              <span className="block text-foreground">15+ languages.</span>
               <span className="block text-primary">So everyone can understand.</span>
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From Arabic to Urdu, Turkish to Chinese — every member of your jama'ah
-              hears the khutbah in their own language. Simultaneously. In real time.
+              From Arabic to Urdu, Turkish to Chinese — every heart in your Jama'ah
+              connects with the Khutbah in the language they understand.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              No barriers. No delays.<br />
+              Live. Simultaneous. In real time.
             </p>
           </div>
           <Languages />
