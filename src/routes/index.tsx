@@ -58,11 +58,14 @@ function Index() {
               translation and ready in your masjid within minutes.
             </p>
             <div className="flex flex-wrap items-center gap-3 mb-14">
-              <Button size="lg" className="bg-primary-gradient shadow-elegant h-12 px-6">
+              <Button
+                size="lg"
+                className="bg-primary-gradient shadow-elegant h-12 px-6"
+                onClick={() =>
+                  document.getElementById("get-started")?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 Get started free <ArrowRight className="size-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="h-12 px-6">
-                Watch demo
               </Button>
             </div>
           </motion.div>
