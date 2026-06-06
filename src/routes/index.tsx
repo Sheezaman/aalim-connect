@@ -32,12 +32,12 @@ function Index() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-left max-w-3xl"
           >
             <p className="font-display text-xl md:text-2xl font-bold tracking-tight text-foreground mb-6">
-              The #1 live{" "}
+              The #1{" "}
               <span className="relative inline-block">
-                khutbah
+                live khutbah translation
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 200 12"
@@ -47,16 +47,16 @@ function Index() {
                   <path d="M2 7 Q 50 1, 100 5 T 198 6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
                 </svg>
               </span>{" "}
-              translation made for masjids
+              made for masjids
             </p>
             <h1 className="font-display text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6">
               Every word of the khutbah, <span className="text-primary italic">understood</span>.
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
               The world's first live khutbah translation platform — delivering real-time
               translation and ready in your masjid within minutes.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
+            <div className="flex flex-wrap items-center gap-3 mb-14">
               <Button size="lg" className="bg-primary-gradient shadow-elegant h-12 px-6">
                 Get started free <ArrowRight className="size-4" />
               </Button>
