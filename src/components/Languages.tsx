@@ -5,7 +5,10 @@ const LANGUAGES = [
   { native: "Français", english: "French", flag: "🇫🇷" },
   { native: "Español", english: "Spanish", flag: "🇪🇸" },
   { native: "Bahasa", english: "Indonesian", flag: "🇮🇩" },
-  { native: "السودانية", english: "Sudanese", flag: "🇸🇩", rtl: true },
+  { native: "Русский", english: "Russian", flag: "🇷🇺" },
+  { native: "Shqip", english: "Albanian", flag: "🇦🇱" },
+  { native: "বাংলা", english: "Bangladeshi", flag: "🇧🇩" },
+  { native: "മലയാളം", english: "Malayalam", flag: "🇮🇳" },
   { native: "中文", english: "Chinese", flag: "🇨🇳" },
 ];
 
