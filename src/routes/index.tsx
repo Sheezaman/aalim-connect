@@ -104,9 +104,9 @@ function Index() {
               From Arabic to Urdu, Turkish to Chinese — every heart in your Jama'ah
               connects with the Khutbah in the language they understand.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-              No barriers. No delays.<br />
-              Live. Simultaneous. In real time.
+            <p className="text-lg leading-relaxed mt-4">
+              <span className="text-muted-foreground">No barriers. No delays.</span><br />
+              <span className="font-bold text-primary">Live. Simultaneous. In real time.</span>
             </p>
           </div>
           <Languages />
