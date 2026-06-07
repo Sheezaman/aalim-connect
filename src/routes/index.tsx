@@ -215,12 +215,12 @@ function Index() {
                     <span className="text-[10px] font-bold px-2 py-1 rounded bg-primary text-primary-foreground">LIVE</span>
                   </div>
                   <p dir="rtl" className="font-arabic text-background text-[15px] leading-[2] text-center mb-3">
-                    عُمَانُ هِيَ مَوْطِنُ الأَصَالَةِ وَالسَّلَامِ، حَيْثُ يَلْتَقِي التَّارِيخُ العَرِيقُ بِالجَمَالِ السَّاحِرِ وَحُسْنِ الضِّيَافَةِ.
+                    عُمانُ أَرْضُ السَّلَامِ وَالأَصَالَةِ، تَحْمِلُ بَيْنَ جِبَالِهَا وَبِحَارِهَا قِصَصَ التَّارِيخِ العَرِيقِ، وَتَفْتَحُ أَبْوَابَهَا بِكَرَمٍ وَمَحَبَّةٍ لِكُلِّ زَائِرٍ
                   </p>
                   <div className="h-px bg-primary/40 mb-3" />
                   <div className="flex items-end justify-between gap-2">
                     <p className="text-background/90 text-[11px] leading-snug text-left flex-1">
-                      Oman is the cradle of authenticity and peace, where ancient history meets breathtaking beauty and warm hospitality.
+                      Oman is a land of peace and authenticity, carrying within its mountains and seas the stories of a rich history, and opening its doors with generosity and kindness to every visitor.
                     </p>
                     <div className="size-10 rounded-sm bg-background p-1 shrink-0">
                       <QRCodeSVG value="https://aalim.app/live" size={32} bgColor="#ffffff" fgColor="#0a0a0a" level="M" />
