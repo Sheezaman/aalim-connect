@@ -54,8 +54,7 @@ function Index() {
               Every word of the khutbah, <span className="text-primary italic">understood</span>.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-              The world's first live khutbah translation platform — delivering real-time
-              translation and ready in your masjid within minutes.
+              The World's <span className="font-bold text-primary">#1</span> live khutbah translation platform breaking language barriers and connecting every worshipper in the masjid through real time multilingual translation. Ready to transform your masjid experience within minutes.
             </p>
             <div className="flex flex-wrap items-center gap-3 mb-14">
               <Button
