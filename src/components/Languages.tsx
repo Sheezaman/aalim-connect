@@ -14,26 +14,26 @@ const LANGUAGES = [
 
 export function Languages() {
   return (
-    <div className="max-w-2xl mx-auto rounded-3xl bg-card border border-border/60 shadow-soft overflow-hidden">
+    <div className="max-w-2xl mx-auto rounded-3xl bg-white shadow-[0_8px_40px_-12px_rgba(0,0,0,0.08)] ring-1 ring-black/[0.04] overflow-hidden">
       {LANGUAGES.map((l, i) => (
         <div
           key={l.english}
-          className={`flex items-center justify-between gap-4 px-6 py-5 ${
-            i !== LANGUAGES.length - 1 ? "border-b border-border/50" : ""
+          className={`flex items-center justify-between gap-4 px-7 py-5 ${
+            i !== LANGUAGES.length - 1 ? "border-b border-gray-100" : ""
           }`}
         >
-          <div className="flex items-center gap-4 min-w-0">
-            <span className="text-3xl leading-none shrink-0">{l.flag}</span>
-            <div className="flex flex-col min-w-0">
+          <div className="flex items-center gap-5 min-w-0">
+            <span className="text-4xl leading-none shrink-0">{l.flag}</span>
+            <div className="flex flex-col min-w-0 gap-0.5">
               <span
                 dir={l.rtl ? "rtl" : "ltr"}
-                className={`text-xl font-medium text-foreground truncate ${
+                className={`text-2xl font-semibold text-gray-900 truncate leading-tight ${
                   l.rtl ? "font-arabic" : ""
                 }`}
               >
                 {l.native}
               </span>
-              <span className="text-sm text-muted-foreground">{l.english}</span>
+              <span className="text-base text-gray-400 font-normal">{l.english}</span>
             </div>
           </div>
           <span className="size-2.5 rounded-full bg-primary shrink-0" />
