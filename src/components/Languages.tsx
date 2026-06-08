@@ -1,4 +1,5 @@
 const LANGUAGES = [
+  { native: "English", english: "English", flag: "🇬🇧" },
   { native: "Türkçe", english: "Turkish", flag: "🇹🇷" },
   { native: "हिन्दी", english: "Hindi", flag: "🇮🇳" },
   { native: "اردو", english: "Urdu", flag: "🇵🇰", rtl: true },
