@@ -9,6 +9,9 @@ const LANGUAGES = [
   { native: "Shqip", english: "Albanian", flag: "🇦🇱" },
   { native: "বাংলা", english: "Bangladeshi", flag: "🇧🇩" },
   { native: "മലയാളം", english: "Malayalam", flag: "🇮🇳" },
+  { native: "دری", english: "Dari", flag: "🇦🇫", rtl: true },
+  { native: "پښتو", english: "Pashto", flag: "🇦🇫", rtl: true },
+  { native: "فارسی", english: "Farsi", flag: "🇮🇷", rtl: true },
   { native: "中文", english: "Chinese", flag: "🇨🇳" },
 ];
 
