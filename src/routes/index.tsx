@@ -75,7 +75,7 @@ function Index() {
             {[
               { title: "Private and Secure", subtitle: "Your data stays protected" },
               { title: "QR Code Access", subtitle: "Instant access for everyone" },
-              { title: "20+ Languages", subtitle: "Understanding for all" },
+              { title: "15+ Languages", subtitle: "Understanding for all" },
             ].map((item) => (
               <div key={item.title} className="flex flex-col items-center gap-2">
                 <h3 className="font-display text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">
